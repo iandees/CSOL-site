@@ -118,10 +118,10 @@ module.exports = function(app) {
     var action = req.params.action;
 
     if (action === 'favorite')
-      return res.send('Favoriting ' + item);
+      return res.send(200, 'Favoriting ' + item);
 
     if (action === 'unfavorite')
-      return res.send('Unfavoriting ' + item);
+      return res.send(200, 'Unfavoriting ' + item);
 
     next();
   });

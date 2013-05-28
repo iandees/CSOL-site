@@ -306,11 +306,11 @@ module.exports = function (app) {
   });
 
   app.get('/login/password', function (req, res, next) {
-    res.render('auth/password.html')
+    res.render(200, 'auth/password.html')
   });
 
   app.post('/login/password', function(req, res, next) {
-    res.send('POST /login/password')
+    res.send(200, 'POST /login/password')
   });
 
   app.get('/signup', function (req, res, next) {
@@ -400,7 +400,7 @@ module.exports = function (app) {
 
   app.get('/signup/generate_username', function (req, res, next) {
     res.contentType('text/plain');
-    res.send(generateUsername());
+    res.send(200, generateUsername());
   });
 
   app.param('signupToken', function (req, res, next, token) {
